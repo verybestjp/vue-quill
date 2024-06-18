@@ -23,12 +23,10 @@ let banner = `/*!
  * ${pkg.homepage || 'https://github.com/vueup/vue-quill'}
  * `
 
-banner += pkg.dependencies?.quill?.match(/\d(.*)/)[0]
-  ? `
- * Includes quill v${pkg.dependencies?.quill?.match(/\d(.*)/)[0]}
+banner += `
+ * Includes quill v1.3.7
  * https://quilljs.com/
  * `
-  : ''
 
 banner += `
  * Copyright (c) ${new Date().getFullYear()} ${pkg.author}

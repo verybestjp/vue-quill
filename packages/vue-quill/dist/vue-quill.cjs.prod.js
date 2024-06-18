@@ -7,7 +7,7 @@
  *
  * Copyright (c) 2024 Ahmad Luthfi Masruri
  * Released under the MIT license
- * Date: 2024-04-12T04:58:23.939Z
+ * Date: 2024-06-18T06:02:45.659Z
  */
 'use strict'
 Object.defineProperty(exports, '__esModule', { value: !0 })
