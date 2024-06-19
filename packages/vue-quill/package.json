@@ -1,6 +1,6 @@
 {
-  "name": "@vueup/vue-quill",
-  "version": "0.0.0-development",
+  "name": "@verybestjp/vue-quill",
+  "version": "0.0.6",
   "description": "Vue 3 rich text editor based on Quill.",
   "main": "index.js",
   "module": "dist/vue-quill.esm-bundler.js",
