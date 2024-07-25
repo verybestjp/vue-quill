@@ -1,5 +1,5 @@
 /*!
- * VueQuill @vueup/vue-quill v0.0.0-development
+ * VueQuill @verybestjp/vue-quill v0.0.0-development
  * https://vueup.github.io/vue-quill/
  *
  * Includes quill v1.3.7
@@ -7,7 +7,7 @@
  *
  * Copyright (c) 2024 Ahmad Luthfi Masruri
  * Released under the MIT license
- * Date: 2024-06-18T06:02:45.659Z
+ * Date: 2024-07-25T07:13:07.493Z
  */
 'use strict'
 Object.defineProperty(exports, '__esModule', { value: !0 })
