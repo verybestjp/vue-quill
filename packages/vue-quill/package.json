@@ -42,7 +42,7 @@
   },
   "homepage": "https://vueup.github.io/vue-quill/",
   "dependencies": {
-    "quill": "github:verybestjp/quill",
+    "@verybestjp/quill": "^0.0.2",
     "quill-delta": "^4.2.2"
   },
   "peerDependencies": {
