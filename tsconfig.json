@@ -18,7 +18,8 @@
     "types": ["jest", "node"],
     "rootDir": ".",
     "paths": {
-      "@vueup/*": ["packages/*/src"]
+      "@vueup/*": ["packages/*/src"],
+      "@verybestjp/quill": ["node_modules/@types/quill"]
     }
   },
   "include": [
