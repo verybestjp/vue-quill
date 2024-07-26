@@ -1,3 +1,11 @@
+# ビルド方法
+```
+npm ci
+# 型エラーが出るため packages/vue-quill/node_modules は削除しておく
+npm run build
+```
+
+
 <p align="center">
   <a href="https://vueup.github.io/vue-quill/" target="_blank" rel="noopener noreferrer">
     <img height="120" src="https://vueup.github.io/vue-quill/quill.svg" alt="Vue + Quill logo">
