@@ -4,7 +4,11 @@ npm ci
 # 型エラーが出るため packages/vue-quill/node_modules は削除しておく
 npm run build
 ```
-
+Quillの型エラーについては以下をtsconfigに記載することで回避
+```
+paths: {
+  "@verybestjp/quill": ["node_modules/@types/quill"]
+```
 
 <p align="center">
   <a href="https://vueup.github.io/vue-quill/" target="_blank" rel="noopener noreferrer">
