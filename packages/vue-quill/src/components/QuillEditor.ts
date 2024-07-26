@@ -5,8 +5,8 @@ import {
   QuillOptionsStatic,
   RangeStatic,
   Sources,
-} from 'quill'
-import Quill from 'quill'
+} from '@verybestjp/quill'
+import Quill from '@verybestjp/quill'
 import Delta from 'quill-delta'
 import {
   defineComponent,
