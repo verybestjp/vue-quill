@@ -7,10 +7,10 @@
  *
  * Copyright (c) 2024 Ahmad Luthfi Masruri
  * Released under the MIT license
- * Date: 2024-07-25T07:13:07.493Z
+ * Date: 2024-07-26T07:42:29.137Z
  */
-import t from 'quill'
-export { default as Quill } from 'quill'
+import t from '@verybestjp/quill'
+export { default as Quill } from '@verybestjp/quill'
 import {
   defineComponent as e,
   onMounted as r,
@@ -48,7 +48,7 @@ function l(t, e, r, n) {
           var h = e.slice(0, f)
           if ((b = e.slice(f)) === l) {
             var p = Math.min(a, f)
-            if ((g = s.slice(0, p)) === (m = h.slice(0, p)))
+            if ((g = s.slice(0, p)) === (j = h.slice(0, p)))
               return y(g, s.slice(p), h.slice(p), l)
           }
         }
@@ -57,7 +57,7 @@ function l(t, e, r, n) {
             b = ((h = e.slice(0, d)), e.slice(d))
           if (h === s) {
             var v = Math.min(i - d, u - d)
-            if ((_ = l.slice(l.length - v)) === (j = b.slice(b.length - v)))
+            if ((_ = l.slice(l.length - v)) === (m = b.slice(b.length - v)))
               return y(s, l.slice(0, l.length - v), b.slice(0, b.length - v), _)
           }
         }
@@ -66,9 +66,9 @@ function l(t, e, r, n) {
         var g = t.slice(0, n.index),
           _ = t.slice(n.index + n.length)
         if (!(u < (p = g.length) + (v = _.length))) {
-          var m = e.slice(0, p),
-            j = e.slice(u - v)
-          if (g === m && _ === j)
+          var j = e.slice(0, p),
+            m = e.slice(u - v)
+          if (g === j && _ === m)
             return y(g, t.slice(p, i - v), e.slice(p, u - v), _)
         }
       }
@@ -174,31 +174,31 @@ function l(t, e, r, n) {
           for (var y = -g + p; y <= g - d; y += 2) {
             for (
               var _ = i + y,
-                m =
+                j =
                   (A =
                     y === -g || (y !== g && a[_ - 1] < a[_ + 1])
                       ? a[_ + 1]
                       : a[_ - 1] + 1) - y;
-              A < r && m < n && t.charAt(A) === e.charAt(m);
+              A < r && j < n && t.charAt(A) === e.charAt(j);
 
             )
-              A++, m++
+              A++, j++
             if (((a[_] = A), A > r)) d += 2
-            else if (m > n) p += 2
+            else if (j > n) p += 2
             else if (h) {
               if ((w = i + f - y) >= 0 && w < u && -1 !== s[w])
-                if (A >= (x = r - s[w])) return c(t, e, A, m)
+                if (A >= (x = r - s[w])) return c(t, e, A, j)
             }
           }
-          for (var j = -g + b; j <= g - v; j += 2) {
+          for (var m = -g + b; m <= g - v; m += 2) {
             for (
               var x,
-                w = i + j,
+                w = i + m,
                 O =
                   (x =
-                    j === -g || (j !== g && s[w - 1] < s[w + 1])
+                    m === -g || (m !== g && s[w - 1] < s[w + 1])
                       ? s[w + 1]
-                      : s[w - 1] + 1) - j;
+                      : s[w - 1] + 1) - m;
               x < r && O < n && t.charAt(r - x - 1) === e.charAt(n - O - 1);
 
             )
@@ -206,10 +206,10 @@ function l(t, e, r, n) {
             if (((s[w] = x), x > r)) v += 2
             else if (O > n) b += 2
             else if (!h) {
-              if ((_ = i + f - j) >= 0 && _ < u && -1 !== a[_]) {
+              if ((_ = i + f - m) >= 0 && _ < u && -1 !== a[_]) {
                 var A
-                m = i + (A = a[_]) - _
-                if (A >= (x = r - x)) return c(t, e, A, m)
+                j = i + (A = a[_]) - _
+                if (A >= (x = r - x)) return c(t, e, A, j)
               }
             }
           }
@@ -367,8 +367,8 @@ function _(t, e, r) {
   return l(t, e, r, !0)
 }
 ;(_.INSERT = 1), (_.DELETE = -1), (_.EQUAL = 0)
-var m = _,
-  j = { exports: {} }
+var j = _,
+  m = { exports: {} }
 !(function (t, e) {
   var r = '__lodash_hash_undefined__',
     n = 9007199254740991,
@@ -387,8 +387,8 @@ var m = _,
     g = '[object Symbol]',
     y = '[object WeakMap]',
     _ = '[object ArrayBuffer]',
-    m = '[object DataView]',
-    j = '[object Float32Array]',
+    j = '[object DataView]',
+    m = '[object Float32Array]',
     x = '[object Float64Array]',
     w = '[object Int8Array]',
     O = '[object Int16Array]',
@@ -404,10 +404,10 @@ var m = _,
   ;(C[o] =
     C['[object Array]'] =
     C[_] =
-    C[m] =
+    C[j] =
     C[i] =
     C[u] =
-    C[j] =
+    C[m] =
     C[x] =
     C[w] =
     C[O] =
@@ -517,8 +517,8 @@ var m = _,
     gt = Dt(Object, 'create'),
     yt = Ut(ht),
     _t = Ut(pt),
-    mt = Ut(dt),
-    jt = Ut(bt),
+    jt = Ut(dt),
+    mt = Ut(bt),
     xt = Ut(vt),
     wt = nt ? nt.prototype : void 0,
     Ot = wt ? wt.valueOf : void 0
@@ -647,12 +647,12 @@ var m = _,
             case i:
             case u:
               return new o(+t)
-            case m:
+            case j:
               return (function (t, e) {
                 var r = e ? Pt(t.buffer) : t.buffer
                 return new t.constructor(r, t.byteOffset, t.byteLength)
               })(t, n)
-            case j:
+            case m:
             case x:
             case w:
             case O:
@@ -877,7 +877,7 @@ var m = _,
   function Bt(t, e) {
     return t === e || (t != t && e != e)
   }
-  ;((ht && It(new ht(new ArrayBuffer(1))) != m) ||
+  ;((ht && It(new ht(new ArrayBuffer(1))) != j) ||
     (pt && It(new pt()) != c) ||
     (dt && It(dt.resolve()) != p) ||
     (bt && It(new bt()) != b) ||
@@ -889,12 +889,12 @@ var m = _,
       if (n)
         switch (n) {
           case yt:
-            return m
+            return j
           case _t:
             return c
-          case mt:
-            return p
           case jt:
+            return p
+          case mt:
             return b
           case xt:
             return y
@@ -938,7 +938,7 @@ var m = _,
   t.exports = function (t) {
     return zt(t, !0, !0)
   }
-})(j, j.exports)
+})(m, m.exports)
 var x = { exports: {} }
 !(function (t, e) {
   var r = '__lodash_hash_undefined__',
@@ -958,8 +958,8 @@ var x = { exports: {} }
     g = '[object String]',
     y = '[object Symbol]',
     _ = '[object WeakMap]',
-    m = '[object ArrayBuffer]',
-    j = '[object DataView]',
+    j = '[object ArrayBuffer]',
+    m = '[object DataView]',
     x = /^\[object .+?Constructor\]$/,
     w = /^(?:0|[1-9]\d*)$/,
     O = {}
@@ -975,9 +975,9 @@ var x = { exports: {} }
       !0),
     (O[o] =
       O[i] =
-      O[m] =
-      O[u] =
       O[j] =
+      O[u] =
+      O[m] =
       O[a] =
       O[l] =
       O[c] =
@@ -1105,11 +1105,11 @@ var x = { exports: {} }
       r = null == t ? 0 : t.length
     for (this.__data__ = new yt(); ++e < r; ) this.add(t[e])
   }
-  function mt(t) {
+  function jt(t) {
     var e = (this.__data__ = new gt(t))
     this.size = e.size
   }
-  function jt(t, e) {
+  function mt(t, e) {
     var r = Ft(t),
       n = !r && Dt(t),
       o = !r && !n && It(t),
@@ -1179,19 +1179,19 @@ var x = { exports: {} }
             }
             if (k && !O)
               return (
-                c || (c = new mt()),
+                c || (c = new jt()),
                 d || Ht(t)
                   ? Tt(t, e, r, n, s, c)
                   : (function (t, e, r, n, o, i, s) {
                       switch (r) {
-                        case j:
+                        case m:
                           if (
                             t.byteLength != e.byteLength ||
                             t.byteOffset != e.byteOffset
                           )
                             return !1
                           ;(t = t.buffer), (e = e.buffer)
-                        case m:
+                        case j:
                           return !(
                             t.byteLength != e.byteLength ||
                             !i(new K(t), new K(e))
@@ -1227,12 +1227,12 @@ var x = { exports: {} }
               if (M || T) {
                 var L = M ? t.value() : t,
                   E = T ? e.value() : e
-                return c || (c = new mt()), s(L, E, r, n, c)
+                return c || (c = new jt()), s(L, E, r, n, c)
               }
             }
             if (!k) return !1
             return (
-              c || (c = new mt()),
+              c || (c = new jt()),
               (function (t, e, r, n, o, i) {
                 var u = 1 & r,
                   a = Lt(t),
@@ -1448,21 +1448,21 @@ var x = { exports: {} }
     (_t.prototype.has = function (t) {
       return this.__data__.has(t)
     }),
-    (mt.prototype.clear = function () {
+    (jt.prototype.clear = function () {
       ;(this.__data__ = new gt()), (this.size = 0)
     }),
-    (mt.prototype.delete = function (t) {
+    (jt.prototype.delete = function (t) {
       var e = this.__data__,
         r = e.delete(t)
       return (this.size = e.size), r
     }),
-    (mt.prototype.get = function (t) {
+    (jt.prototype.get = function (t) {
       return this.__data__.get(t)
     }),
-    (mt.prototype.has = function (t) {
+    (jt.prototype.has = function (t) {
       return this.__data__.has(t)
     }),
-    (mt.prototype.set = function (t, e) {
+    (jt.prototype.set = function (t, e) {
       var r = this.__data__
       if (r instanceof gt) {
         var n = r.__data__
@@ -1518,7 +1518,7 @@ var x = { exports: {} }
   function Nt(t, e) {
     return t === e || (t != t && e != e)
   }
-  ;((nt && Ct(new nt(new ArrayBuffer(1))) != j) ||
+  ;((nt && Ct(new nt(new ArrayBuffer(1))) != m) ||
     (ot && Ct(new ot()) != f) ||
     (it && Ct(it.resolve()) != d) ||
     (ut && Ct(new ut()) != v) ||
@@ -1530,7 +1530,7 @@ var x = { exports: {} }
       if (n)
         switch (n) {
           case lt:
-            return j
+            return m
           case ct:
             return f
           case ft:
@@ -1587,7 +1587,7 @@ var x = { exports: {} }
         return Bt(t) && Rt(t.length) && !!O[wt(t)]
       }
   function Qt(t) {
-    return null != (e = t) && Rt(e.length) && !qt(e) ? jt(t) : Mt(t)
+    return null != (e = t) && Rt(e.length) && !qt(e) ? mt(t) : Mt(t)
     var e
   }
   t.exports = function (t, e) {
@@ -1602,7 +1602,7 @@ var w = {},
     }
 Object.defineProperty(w, '__esModule', { value: !0 })
 var A,
-  k = O(j.exports),
+  k = O(m.exports),
   M = O(x.exports)
 !(function (t) {
   ;(t.compose = function (t, e, r) {
@@ -1772,8 +1772,8 @@ var C =
     function (t) {
       return t && t.__esModule ? t : { default: t }
     },
-  P = C(m),
-  $ = C(j.exports),
+  P = C(j),
+  $ = C(m.exports),
   N = C(x.exports),
   D = C(w),
   F = C(z()),
@@ -2182,7 +2182,7 @@ const R = {
                   t.register(`modules/${r.name}`, r.module)
               else t.register(`modules/${e.modules.name}`, e.modules.module)
             ;(s = new t(c.value, l)),
-              j(e.content),
+              m(e.content),
               s.on('text-change', v),
               s.on('selection-change', y),
               s.on('editor-change', _),
@@ -2248,7 +2248,7 @@ const R = {
           return !1
         },
         v = (t, r, n) => {
-          ;(d = p(m())),
+          ;(d = p(j())),
             b(e.content) || a.emit('update:content', d),
             a.emit('textChange', { delta: t, oldContents: r, source: n })
         },
@@ -2276,7 +2276,7 @@ const R = {
                 source: t[3],
               })
         },
-        m = (t, r) =>
+        j = (t, r) =>
           'html' === e.contentType
             ? O()
             : 'text' === e.contentType
@@ -2284,7 +2284,7 @@ const R = {
             : null == s
             ? void 0
             : s.getContents(t, r),
-        j = (t, r = 'api') => {
+        m = (t, r = 'api') => {
           const n = t || ('delta' === e.contentType ? new q() : '')
           'html' === e.contentType
             ? A(n)
@@ -2319,7 +2319,7 @@ const R = {
           (t) => {
             if (!s || !t || b(t)) return
             const e = s.getSelection()
-            e && u(() => (null == s ? void 0 : s.setSelection(e))), j(t)
+            e && u(() => (null == s ? void 0 : s.setSelection(e))), m(t)
           },
           { deep: !0 }
         ),
@@ -2343,8 +2343,8 @@ const R = {
             if (s) return s
             throw 'The quill editor hasn\'t been instantiated yet,\n                  make sure to call this method when the editor ready\n                  or use v-on:ready="onReady(quill)" event instead.'
           },
-          getContents: m,
-          setContents: j,
+          getContents: j,
+          setContents: m,
           getHTML: O,
           setHTML: A,
           pasteHTML: (t, e = 'api') => {
