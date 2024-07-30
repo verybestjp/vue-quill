@@ -7,13 +7,13 @@
  *
  * Copyright (c) 2024 undefined
  * Released under the undefined license
- * Date: 2024-07-26T07:42:29.186Z
+ * Date: 2024-07-30T05:55:58.511Z
  */
 !(function (t, e) {
   'object' == typeof exports && 'undefined' != typeof module
-    ? e(require('vue'), require('@verybestjp/quill'))
+    ? e(require('vue'), require('quill'))
     : 'function' == typeof define && define.amd
-    ? define(['vue', '@verybestjp/quill'], e)
+    ? define(['vue', 'quill'], e)
     : e(
         (t = 'undefined' != typeof globalThis ? globalThis : t || self).Vue,
         t.Quill
@@ -53,7 +53,7 @@
             var h = e.slice(0, f)
             if ((v = e.slice(f)) === l) {
               var p = Math.min(a, f)
-              if ((y = s.slice(0, p)) === (j = h.slice(0, p)))
+              if ((y = s.slice(0, p)) === (m = h.slice(0, p)))
                 return b(y, s.slice(p), h.slice(p), l)
             }
           }
@@ -62,7 +62,7 @@
               v = ((h = e.slice(0, d)), e.slice(d))
             if (h === s) {
               var g = Math.min(i - d, u - d)
-              if ((_ = l.slice(l.length - g)) === (m = v.slice(v.length - g)))
+              if ((_ = l.slice(l.length - g)) === (j = v.slice(v.length - g)))
                 return b(
                   s,
                   l.slice(0, l.length - g),
@@ -76,9 +76,9 @@
           var y = t.slice(0, r.index),
             _ = t.slice(r.index + r.length)
           if (!(u < (p = y.length) + (g = _.length))) {
-            var j = e.slice(0, p),
-              m = e.slice(u - g)
-            if (y === j && _ === m)
+            var m = e.slice(0, p),
+              j = e.slice(u - g)
+            if (y === m && _ === j)
               return b(y, t.slice(p, i - g), e.slice(p, u - g), _)
           }
         }
@@ -183,21 +183,21 @@
           ) {
             for (var _ = -y + d; _ <= y - b; _ += 2) {
               for (
-                var j = u + _,
-                  m =
+                var m = u + _,
+                  j =
                     (k =
-                      _ === -y || (_ !== y && l[j - 1] < l[j + 1])
-                        ? l[j + 1]
-                        : l[j - 1] + 1) - _;
-                k < n && m < r && t.charAt(k) === e.charAt(m);
+                      _ === -y || (_ !== y && l[m - 1] < l[m + 1])
+                        ? l[m + 1]
+                        : l[m - 1] + 1) - _;
+                k < n && j < r && t.charAt(k) === e.charAt(j);
 
               )
-                k++, m++
-              if (((l[j] = k), k > n)) b += 2
-              else if (m > r) d += 2
+                k++, j++
+              if (((l[m] = k), k > n)) b += 2
+              else if (j > r) d += 2
               else if (p) {
                 if ((O = u + h - _) >= 0 && O < s && -1 !== c[O])
-                  if (k >= (x = n - c[O])) return a(t, e, k, m)
+                  if (k >= (x = n - c[O])) return a(t, e, k, j)
               }
             }
             for (var w = -y + v; w <= y - g; w += 2) {
@@ -216,10 +216,10 @@
               if (((c[O] = x), x > n)) g += 2
               else if (A > r) v += 2
               else if (!p) {
-                if ((j = u + h - w) >= 0 && j < s && -1 !== l[j]) {
+                if ((m = u + h - w) >= 0 && m < s && -1 !== l[m]) {
                   var k
-                  m = u + (k = l[j]) - j
-                  if (k >= (x = n - x)) return a(t, e, k, m)
+                  j = u + (k = l[m]) - m
+                  if (k >= (x = n - x)) return a(t, e, k, j)
                 }
               }
             }
@@ -397,8 +397,8 @@
       g = '[object Symbol]',
       y = '[object WeakMap]',
       _ = '[object ArrayBuffer]',
-      j = '[object DataView]',
-      m = '[object Float32Array]',
+      m = '[object DataView]',
+      j = '[object Float32Array]',
       w = '[object Float64Array]',
       x = '[object Int8Array]',
       O = '[object Int16Array]',
@@ -414,10 +414,10 @@
     ;(C[i] =
       C['[object Array]'] =
       C[_] =
-      C[j] =
+      C[m] =
       C[u] =
       C[a] =
-      C[m] =
+      C[j] =
       C[w] =
       C[x] =
       C[O] =
@@ -527,8 +527,8 @@
       gt = Nt(Object, 'create'),
       yt = Dt(ht),
       _t = Dt(pt),
-      jt = Dt(dt),
-      mt = Dt(bt),
+      mt = Dt(dt),
+      jt = Dt(bt),
       wt = Dt(vt),
       xt = rt ? rt.prototype : void 0,
       Ot = xt ? xt.valueOf : void 0
@@ -657,12 +657,12 @@
               case u:
               case a:
                 return new o(+t)
-              case j:
+              case m:
                 return (function (t, e) {
                   var n = e ? Pt(t.buffer) : t.buffer
                   return new t.constructor(n, t.byteOffset, t.byteLength)
                 })(t, r)
-              case m:
+              case j:
               case w:
               case x:
               case O:
@@ -887,7 +887,7 @@
     function Rt(t, e) {
       return t === e || (t != t && e != e)
     }
-    ;((ht && It(new ht(new ArrayBuffer(1))) != j) ||
+    ;((ht && It(new ht(new ArrayBuffer(1))) != m) ||
       (pt && It(new pt()) != c) ||
       (dt && It(dt.resolve()) != p) ||
       (bt && It(new bt()) != b) ||
@@ -899,12 +899,12 @@
         if (r)
           switch (r) {
             case yt:
-              return j
+              return m
             case _t:
               return c
-            case jt:
-              return p
             case mt:
+              return p
+            case jt:
               return b
             case wt:
               return y
@@ -968,8 +968,8 @@
       g = '[object String]',
       y = '[object Symbol]',
       _ = '[object WeakMap]',
-      j = '[object ArrayBuffer]',
-      m = '[object DataView]',
+      m = '[object ArrayBuffer]',
+      j = '[object DataView]',
       w = /^\[object .+?Constructor\]$/,
       x = /^(?:0|[1-9]\d*)$/,
       O = {}
@@ -985,9 +985,9 @@
         !0),
       (O[i] =
         O[u] =
-        O[j] =
-        O[a] =
         O[m] =
+        O[a] =
+        O[j] =
         O[s] =
         O[l] =
         O[c] =
@@ -1115,11 +1115,11 @@
         n = null == t ? 0 : t.length
       for (this.__data__ = new yt(); ++e < n; ) this.add(t[e])
     }
-    function jt(t) {
+    function mt(t) {
       var e = (this.__data__ = new gt(t))
       this.size = e.size
     }
-    function mt(t, e) {
+    function jt(t, e) {
       var n = Ft(t),
         r = !n && Nt(t),
         o = !n && !r && It(t),
@@ -1190,19 +1190,19 @@
               }
               if (k && !O)
                 return (
-                  c || (c = new jt()),
+                  c || (c = new mt()),
                   d || Ht(t)
                     ? Mt(t, e, n, r, o, c)
                     : (function (t, e, n, r, o, i, u) {
                         switch (n) {
-                          case m:
+                          case j:
                             if (
                               t.byteLength != e.byteLength ||
                               t.byteOffset != e.byteOffset
                             )
                               return !1
                             ;(t = t.buffer), (e = e.buffer)
-                          case j:
+                          case m:
                             return !(
                               t.byteLength != e.byteLength ||
                               !i(new K(t), new K(e))
@@ -1238,12 +1238,12 @@
                 if (T || M) {
                   var L = T ? t.value() : t,
                     E = M ? e.value() : e
-                  return c || (c = new jt()), o(L, E, n, r, c)
+                  return c || (c = new mt()), o(L, E, n, r, c)
                 }
               }
               if (!k) return !1
               return (
-                c || (c = new jt()),
+                c || (c = new mt()),
                 (function (t, e, n, r, o, i) {
                   var u = 1 & n,
                     a = Lt(t),
@@ -1459,21 +1459,21 @@
       (_t.prototype.has = function (t) {
         return this.__data__.has(t)
       }),
-      (jt.prototype.clear = function () {
+      (mt.prototype.clear = function () {
         ;(this.__data__ = new gt()), (this.size = 0)
       }),
-      (jt.prototype.delete = function (t) {
+      (mt.prototype.delete = function (t) {
         var e = this.__data__,
           n = e.delete(t)
         return (this.size = e.size), n
       }),
-      (jt.prototype.get = function (t) {
+      (mt.prototype.get = function (t) {
         return this.__data__.get(t)
       }),
-      (jt.prototype.has = function (t) {
+      (mt.prototype.has = function (t) {
         return this.__data__.has(t)
       }),
-      (jt.prototype.set = function (t, e) {
+      (mt.prototype.set = function (t, e) {
         var n = this.__data__
         if (n instanceof gt) {
           var r = n.__data__
@@ -1529,7 +1529,7 @@
     function qt(t, e) {
       return t === e || (t != t && e != e)
     }
-    ;((rt && Ct(new rt(new ArrayBuffer(1))) != m) ||
+    ;((rt && Ct(new rt(new ArrayBuffer(1))) != j) ||
       (ot && Ct(new ot()) != f) ||
       (it && Ct(it.resolve()) != d) ||
       (ut && Ct(new ut()) != v) ||
@@ -1541,7 +1541,7 @@
         if (r)
           switch (r) {
             case lt:
-              return m
+              return j
             case ct:
               return f
             case ft:
@@ -1598,23 +1598,23 @@
           return Rt(t) && Bt(t.length) && !!O[xt(t)]
         }
     function Qt(t) {
-      return null != (e = t) && Bt(e.length) && !Ut(e) ? mt(t) : Tt(t)
+      return null != (e = t) && Bt(e.length) && !Ut(e) ? jt(t) : Tt(t)
       var e
     }
     t.exports = function (t, e) {
       return At(t, e)
     }
   })(_, _.exports)
-  var j = {},
-    m =
+  var m = {},
+    j =
       (o && o.__importDefault) ||
       function (t) {
         return t && t.__esModule ? t : { default: t }
       }
-  Object.defineProperty(j, '__esModule', { value: !0 })
+  Object.defineProperty(m, '__esModule', { value: !0 })
   var w,
-    x = m(y.exports),
-    O = m(_.exports)
+    x = j(y.exports),
+    O = j(_.exports)
   !(function (t) {
     ;(t.compose = function (t, e, n) {
       void 0 === t && (t = {}),
@@ -1664,7 +1664,7 @@
         }
       })
   })(w || (w = {})),
-    (j.default = w)
+    (m.default = w)
   var A,
     k,
     T = {},
@@ -1786,7 +1786,7 @@
     S = E(g),
     z = E(y.exports),
     C = E(_.exports),
-    P = E(j),
+    P = E(m),
     $ = E(L()),
     q = String.fromCharCode(0),
     N = (function () {
@@ -2296,7 +2296,7 @@
           },
           v = (t, n) =>
             'html' === e.contentType
-              ? j()
+              ? m()
               : 'text' === e.contentType
               ? y(t, n)
               : null == o
@@ -2305,7 +2305,7 @@
           g = (t, n = 'api') => {
             const r = t || ('delta' === e.contentType ? new N() : '')
             'html' === e.contentType
-              ? m(r)
+              ? j(r)
               : 'text' === e.contentType
               ? _(r, n)
               : null == o || o.setContents(r, n),
@@ -2321,14 +2321,14 @@
           _ = (t, e = 'api') => {
             null == o || o.setText(t, e)
           },
-          j = () => {
+          m = () => {
             var t
             return null !== (t = null == o ? void 0 : o.root.innerHTML) &&
               void 0 !== t
               ? t
               : ''
           },
-          m = (t) => {
+          j = (t) => {
             o && (o.root.innerHTML = t)
           }
         return (
@@ -2365,8 +2365,8 @@
             },
             getContents: v,
             setContents: g,
-            getHTML: j,
-            setHTML: m,
+            getHTML: m,
+            setHTML: j,
             pasteHTML: (t, e = 'api') => {
               const n = null == o ? void 0 : o.clipboard.convert(t)
               n && (null == o || o.setContents(n, e))
