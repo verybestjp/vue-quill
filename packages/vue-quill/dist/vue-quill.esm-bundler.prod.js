@@ -7,10 +7,10 @@
  *
  * Copyright (c) 2024 Ahmad Luthfi Masruri
  * Released under the MIT license
- * Date: 2024-07-26T07:42:29.137Z
+ * Date: 2024-07-30T04:19:36.420Z
  */
-import e from '@verybestjp/quill'
-export { default as Quill } from '@verybestjp/quill'
+import e from 'quill'
+export { default as Quill } from 'quill'
 import t from 'quill-delta'
 export { default as Delta } from 'quill-delta'
 import {
@@ -95,27 +95,27 @@ const d = {
     setup: (o, s) => {
       let u, c
       l(() => {
-        m()
+        b()
       }),
         n(() => {
           u = null
         })
-      const b = r(),
-        m = () => {
+      const m = r(),
+        b = () => {
           var t
-          if (b.value) {
+          if (m.value) {
             if (((c = p()), o.modules))
               if (Array.isArray(o.modules))
                 for (const t of o.modules)
                   e.register(`modules/${t.name}`, t.module)
               else e.register(`modules/${o.modules.name}`, o.modules.module)
-            ;(u = new e(b.value, c)),
-              q(o.content),
-              u.on('text-change', h),
+            ;(u = new e(m.value, c)),
+              x(o.content),
+              u.on('text-change', v),
               u.on('selection-change', O),
               u.on('editor-change', T),
-              'bubble' !== o.theme && b.value.classList.remove('ql-bubble'),
-              'snow' !== o.theme && b.value.classList.remove('ql-snow'),
+              'bubble' !== o.theme && m.value.classList.remove('ql-bubble'),
+              'snow' !== o.theme && m.value.classList.remove('ql-snow'),
               null === (t = u.getModule('toolbar')) ||
                 void 0 === t ||
                 t.container.addEventListener('mousedown', (e) => {
@@ -160,13 +160,13 @@ const d = {
           return Object.assign({}, o.globalOptions, o.options, e)
         },
         g = (e) => ('object' == typeof e && e ? e.slice() : e)
-      let v
-      const f = (e) => {
-          if (typeof v == typeof e) {
-            if (e === v) return !0
-            if ('object' == typeof e && e && 'object' == typeof v && v)
+      let f
+      const h = (e) => {
+          if (typeof f == typeof e) {
+            if (e === f) return !0
+            if ('object' == typeof e && e && 'object' == typeof f && f)
               return (
-                (t = v.diff(e)),
+                (t = f.diff(e)),
                 !Object.values(t.ops).some(
                   (e) => !e.retain || 1 !== Object.keys(e).length
                 )
@@ -175,9 +175,9 @@ const d = {
           var t
           return !1
         },
-        h = (e, t, l) => {
-          ;(v = g(j())),
-            f(o.content) || s.emit('update:content', v),
+        v = (e, t, l) => {
+          ;(f = g(q())),
+            h(o.content) || s.emit('update:content', f),
             s.emit('textChange', { delta: e, oldContents: t, source: l })
         },
         y = r(),
@@ -186,7 +186,7 @@ const d = {
             s.emit('selectionChange', { range: e, oldRange: t, source: o })
         }
       i(y, (e) => {
-        s.emit(e ? 'focus' : 'blur', b)
+        s.emit(e ? 'focus' : 'blur', m)
       })
       const T = (...e) => {
           'text-change' === e[0] &&
@@ -204,24 +204,24 @@ const d = {
                 source: e[3],
               })
         },
-        j = (e, t) =>
+        q = (e, t) =>
           'html' === o.contentType
             ? k()
             : 'text' === o.contentType
-            ? x(e, t)
+            ? j(e, t)
             : null == u
             ? void 0
             : u.getContents(e, t),
-        q = (e, l = 'api') => {
+        x = (e, l = 'api') => {
           const n = e || ('delta' === o.contentType ? new t() : '')
           'html' === o.contentType
             ? w(n)
             : 'text' === o.contentType
             ? C(n, l)
             : null == u || u.setContents(n, l),
-            (v = g(n))
+            (f = g(n))
         },
-        x = (e, t) => {
+        j = (e, t) => {
           var o
           return null !== (o = null == u ? void 0 : u.getText(e, t)) &&
             void 0 !== o
@@ -245,9 +245,9 @@ const d = {
         i(
           () => o.content,
           (e) => {
-            if (!u || !e || f(e)) return
+            if (!u || !e || h(e)) return
             const t = u.getSelection()
-            t && a(() => (null == u ? void 0 : u.setSelection(t))), q(e)
+            t && a(() => (null == u ? void 0 : u.setSelection(t))), x(e)
           },
           { deep: !0 }
         ),
@@ -258,8 +258,8 @@ const d = {
           }
         ),
         {
-          editor: b,
-          getEditor: () => b.value,
+          editor: m,
+          getEditor: () => m.value,
           getToolbar: () => {
             var e
             return null === (e = null == u ? void 0 : u.getModule('toolbar')) ||
@@ -271,8 +271,8 @@ const d = {
             if (u) return u
             throw 'The quill editor hasn\'t been instantiated yet,\n                  make sure to call this method when the editor ready\n                  or use v-on:ready="onReady(quill)" event instead.'
           },
-          getContents: j,
-          setContents: q,
+          getContents: q,
+          setContents: x,
           getHTML: k,
           setHTML: w,
           pasteHTML: (e, t = 'api') => {
@@ -282,7 +282,7 @@ const d = {
           focus: () => {
             null == u || u.focus()
           },
-          getText: x,
+          getText: j,
           setText: C,
           reinit: () => {
             a(() => {
@@ -292,7 +292,7 @@ const d = {
                 (null === (e = u.getModule('toolbar')) ||
                   void 0 === e ||
                   e.container.remove()),
-                m()
+                b()
             })
           },
         }
