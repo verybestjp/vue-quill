@@ -19,7 +19,7 @@
     "rootDir": ".",
     "paths": {
       "@vueup/*": ["packages/*/src"],
-      "quill": ["node_modules/@types/quill"]
+      "@verybestjp/quill": ["node_modules/@types/quill"]
     }
   },
   "include": [

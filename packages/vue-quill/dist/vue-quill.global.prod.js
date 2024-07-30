@@ -7,13 +7,13 @@
  *
  * Copyright (c) 2024 Ahmad Luthfi Masruri
  * Released under the MIT license
- * Date: 2024-07-30T04:19:36.420Z
+ * Date: 2024-07-26T07:42:29.137Z
  */
 !(function (t, e) {
   'object' == typeof exports && 'undefined' != typeof module
-    ? e(exports, require('quill'), require('vue'))
+    ? e(exports, require('@verybestjp/quill'), require('vue'))
     : 'function' == typeof define && define.amd
-    ? define(['exports', 'quill', 'vue'], e)
+    ? define(['exports', '@verybestjp/quill', 'vue'], e)
     : e(
         ((t =
           'undefined' != typeof globalThis ? globalThis : t || self).VueQuill =

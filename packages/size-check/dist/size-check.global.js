@@ -7,13 +7,13 @@
  *
  * Copyright (c) 2024 undefined
  * Released under the undefined license
- * Date: 2024-07-30T04:19:36.420Z
+ * Date: 2024-07-26T07:42:29.186Z
  */
 ;(function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined'
-    ? factory(require('vue'), require('quill'))
+    ? factory(require('vue'), require('@verybestjp/quill'))
     : typeof define === 'function' && define.amd
-    ? define(['vue', 'quill'], factory)
+    ? define(['vue', '@verybestjp/quill'], factory)
     : ((global =
         typeof globalThis !== 'undefined' ? globalThis : global || self),
       factory(global.Vue, global.Quill))
@@ -5544,8 +5544,9 @@
         quill.on('editor-change', handleEditorChange)
         // Remove editor class when theme changes
         if (props.theme !== 'bubble') editor.value.classList.remove('ql-bubble')
-        if (props.theme !== 'snow') editor.value.classList.remove('ql-snow')
-        // Fix clicking the quill toolbar is detected as blur event
+        if (props.theme !== 'snow')
+          editor.value.classList.remove('ql-snow')
+          // Fix clicking the quill toolbar is detected as blur event
         ;(_a = quill.getModule('toolbar')) === null || _a === void 0
           ? void 0
           : _a.container.addEventListener('mousedown', (e) => {
