@@ -7,11 +7,11 @@
  *
  * Copyright (c) 2024 Ahmad Luthfi Masruri
  * Released under the MIT license
- * Date: 2024-07-26T07:42:29.137Z
+ * Date: 2024-07-30T05:55:58.511Z
  */
 'use strict'
 Object.defineProperty(exports, '__esModule', { value: !0 })
-var e = require('@verybestjp/quill'),
+var e = require('quill'),
   t = require('quill-delta'),
   o = require('vue')
 function l(e) {
@@ -109,8 +109,8 @@ const i = {
             ;(l = new n(s.value, a)),
               y(e.content),
               l.on('text-change', m),
-              l.on('selection-change', v),
-              l.on('editor-change', g),
+              l.on('selection-change', g),
+              l.on('editor-change', v),
               'bubble' !== e.theme && s.value.classList.remove('ql-bubble'),
               'snow' !== e.theme && s.value.classList.remove('ql-snow'),
               null === (o = l.getModule('toolbar')) ||
@@ -178,14 +178,14 @@ const i = {
             t.emit('textChange', { delta: o, oldContents: l, source: n })
         },
         h = o.ref(),
-        v = (e, o, n) => {
+        g = (e, o, n) => {
           ;(h.value = !!(null == l ? void 0 : l.hasFocus())),
             t.emit('selectionChange', { range: e, oldRange: o, source: n })
         }
       o.watch(h, (e) => {
         t.emit(e ? 'focus' : 'blur', s)
       })
-      const g = (...e) => {
+      const v = (...e) => {
           'text-change' === e[0] &&
             t.emit('editorChange', {
               name: e[0],
