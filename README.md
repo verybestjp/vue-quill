@@ -7,7 +7,7 @@ npm run build
 Quillの型エラーについては以下をtsconfigに記載することで回避
 ```
 paths: {
-  "@verybestjp/quill": ["node_modules/@types/quill"]
+  "quill": ["node_modules/@types/quill"]
 ```
 
 <p align="center">
