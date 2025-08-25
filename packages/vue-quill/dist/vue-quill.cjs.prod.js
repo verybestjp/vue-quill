@@ -5,13 +5,13 @@
  * Includes quill v1.3.7
  * https://quilljs.com/
  *
- * Copyright (c) 2024 Ahmad Luthfi Masruri
+ * Copyright (c) 2025 Ahmad Luthfi Masruri
  * Released under the MIT license
- * Date: 2024-07-30T05:55:58.511Z
+ * Date: 2025-08-25T11:58:41.914Z
  */
 'use strict'
 Object.defineProperty(exports, '__esModule', { value: !0 })
-var e = require('quill'),
+var e = require('@verybestjp/quill'),
   t = require('quill-delta'),
   o = require('vue')
 function l(e) {
@@ -109,8 +109,8 @@ const i = {
             ;(l = new n(s.value, a)),
               y(e.content),
               l.on('text-change', m),
-              l.on('selection-change', g),
-              l.on('editor-change', v),
+              l.on('selection-change', v),
+              l.on('editor-change', g),
               'bubble' !== e.theme && s.value.classList.remove('ql-bubble'),
               'snow' !== e.theme && s.value.classList.remove('ql-snow'),
               null === (o = l.getModule('toolbar')) ||
@@ -178,14 +178,14 @@ const i = {
             t.emit('textChange', { delta: o, oldContents: l, source: n })
         },
         h = o.ref(),
-        g = (e, o, n) => {
+        v = (e, o, n) => {
           ;(h.value = !!(null == l ? void 0 : l.hasFocus())),
             t.emit('selectionChange', { range: e, oldRange: o, source: n })
         }
       o.watch(h, (e) => {
         t.emit(e ? 'focus' : 'blur', s)
       })
-      const v = (...e) => {
+      const g = (...e) => {
           'text-change' === e[0] &&
             t.emit('editorChange', {
               name: e[0],

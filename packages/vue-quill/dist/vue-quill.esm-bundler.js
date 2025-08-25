@@ -5,12 +5,12 @@
  * Includes quill v1.3.7
  * https://quilljs.com/
  *
- * Copyright (c) 2024 Ahmad Luthfi Masruri
+ * Copyright (c) 2025 Ahmad Luthfi Masruri
  * Released under the MIT license
- * Date: 2024-07-30T05:55:58.511Z
+ * Date: 2025-08-25T11:58:41.914Z
  */
-import Quill from 'quill'
-export { default as Quill } from 'quill'
+import Quill from '@verybestjp/quill'
+export { default as Quill } from '@verybestjp/quill'
 import Delta from 'quill-delta'
 export { default as Delta } from 'quill-delta'
 import {
@@ -156,8 +156,9 @@ const QuillEditor = defineComponent({
       quill.on('editor-change', handleEditorChange)
       // Remove editor class when theme changes
       if (props.theme !== 'bubble') editor.value.classList.remove('ql-bubble')
-      if (props.theme !== 'snow') editor.value.classList.remove('ql-snow')
-      // Fix clicking the quill toolbar is detected as blur event
+      if (props.theme !== 'snow')
+        editor.value.classList.remove('ql-snow')
+        // Fix clicking the quill toolbar is detected as blur event
       ;(_a = quill.getModule('toolbar')) === null || _a === void 0
         ? void 0
         : _a.container.addEventListener('mousedown', (e) => {

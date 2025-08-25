@@ -5,15 +5,15 @@
  * Includes quill v1.3.7
  * https://quilljs.com/
  *
- * Copyright (c) 2024 Ahmad Luthfi Masruri
+ * Copyright (c) 2025 Ahmad Luthfi Masruri
  * Released under the MIT license
- * Date: 2024-07-30T05:55:58.511Z
+ * Date: 2025-08-25T11:58:41.914Z
  */
 !(function (t, e) {
   'object' == typeof exports && 'undefined' != typeof module
-    ? e(exports, require('quill'), require('vue'))
+    ? e(exports, require('@verybestjp/quill'), require('vue'))
     : 'function' == typeof define && define.amd
-    ? define(['exports', 'quill', 'vue'], e)
+    ? define(['exports', '@verybestjp/quill', 'vue'], e)
     : e(
         ((t =
           'undefined' != typeof globalThis ? globalThis : t || self).VueQuill =
