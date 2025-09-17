@@ -1,7 +1,8 @@
 # ビルド方法
 ```
-npm ci
-# 型エラーが出るため packages/vue-quill/node_modules は削除しておく
+# .npmrc を legal_plainなどから packages/vue-quill 以下にコピーする
+(cd packages/vue-quill; npm ci; rm -rf node_modules .npmrc)
+
 npm run build
 ```
 Quillの型エラーについては以下をtsconfigに記載することで回避
