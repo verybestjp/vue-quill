@@ -7,7 +7,7 @@
  *
  * Copyright (c) 2025 Ahmad Luthfi Masruri
  * Released under the MIT license
- * Date: 2025-08-25T11:58:41.914Z
+ * Date: 2025-09-17T05:53:04.049Z
  */
 !(function (t, e) {
   'object' == typeof exports && 'undefined' != typeof module

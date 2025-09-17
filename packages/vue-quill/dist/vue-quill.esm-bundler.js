@@ -7,7 +7,7 @@
  *
  * Copyright (c) 2025 Ahmad Luthfi Masruri
  * Released under the MIT license
- * Date: 2025-08-25T11:58:41.914Z
+ * Date: 2025-09-17T05:53:04.049Z
  */
 import Quill from '@verybestjp/quill'
 export { default as Quill } from '@verybestjp/quill'
@@ -156,9 +156,8 @@ const QuillEditor = defineComponent({
       quill.on('editor-change', handleEditorChange)
       // Remove editor class when theme changes
       if (props.theme !== 'bubble') editor.value.classList.remove('ql-bubble')
-      if (props.theme !== 'snow')
-        editor.value.classList.remove('ql-snow')
-        // Fix clicking the quill toolbar is detected as blur event
+      if (props.theme !== 'snow') editor.value.classList.remove('ql-snow')
+      // Fix clicking the quill toolbar is detected as blur event
       ;(_a = quill.getModule('toolbar')) === null || _a === void 0
         ? void 0
         : _a.container.addEventListener('mousedown', (e) => {
