@@ -7,7 +7,7 @@
  *
  * Copyright (c) 2025 Ahmad Luthfi Masruri
  * Released under the MIT license
- * Date: 2025-12-03T08:05:12.906Z
+ * Date: 2025-12-09T11:23:24.612Z
  */
 import e from '@verybestjp/quill'
 export { default as Quill } from '@verybestjp/quill'
